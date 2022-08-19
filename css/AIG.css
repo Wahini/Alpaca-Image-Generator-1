@@ -93,11 +93,7 @@ color: #00193d;
 #section_background,
 #section_neck,
 #section_ears,
-#section_leg,
-#section_hair,
-#section_mouth,
-#section_eyes,
-#section_accessories{
+#section_leg{
     display: none;
 }
 
