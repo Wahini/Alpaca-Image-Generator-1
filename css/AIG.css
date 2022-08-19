@@ -90,7 +90,8 @@ color: #00193d;
 #section_background,
 #section_mayo,
 #section_nose,
-#section_cloth{
+#section_cloth
+{
     display: none;
 }
 
