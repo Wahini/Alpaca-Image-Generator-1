@@ -1,54 +1,56 @@
 // Primary Buttons select
 const background_btn = document.getElementById('background');
-const neck_btn = document.getElementById('neck');
-const ears_btn = document.getElementById('ears');
-const leg_btn = document.getElementById('leg');
-const hair_btn = document.getElementById('hair');
-const mouth_btn = document.getElementById('mouth');
-const eyes_btn = document.getElementById('eyes');
-const accessories_btn = document.getElementById('accessories');
+const mayo_btn = document.getElementById('mayo');
+const nose_btn = document.getElementById('nose');
+const clot_btn = document.getElementById('cloth');
 
 //heading select
 const seconday_heading = document.getElementById('secondary-heading-2');
 
 //section select
 const background_section = document.getElementById('section_background');
-const neck_section = document.getElementById('section_neck');
-const ears_section = document.getElementById('section_ears');
-const leg_section = document.getElementById('section_leg');
-const hair_section = document.getElementById('section_hair');
-const mouth_section = document.getElementById('section_mouth');
-const eyes_section = document.getElementById('section_eyes');
-const accessories_section = document.getElementById('section_accessories');           
-const style_section = document.getElementById('section-style');
-
+const mayo_section = document.getElementById('section_mayo');
+const nose_section = document.getElementById('section_nose');
+const cloth_section = document.getElementById('section_cloth');
 
 //All secondary buttons select acc to section
 const bgBtnAll = document.querySelectorAll('.btn-bg');
-const neckBtnAll = document.querySelectorAll('.btn-neck');
-const earsBtnAll = document.querySelectorAll('.btn-ears');
-const legBtnAll = document.querySelectorAll('.btn-leg');
-const hairBtnAll =document.querySelectorAll('.btn-hair');
-const mouthBtnAll = document.querySelectorAll('.btn-mouth');
-const eyesBtnAll = document.querySelectorAll('.btn-eyes');
-const accBtnAll = document.querySelectorAll('.btn-accessories');
+const mayoBtnAll = document.querySelectorAll('.btn-mayo');
+const noseBtnAll = document.querySelectorAll('.btn-nose');
+const clothBtnAll = document.querySelectorAll('.btn-cloth');
 
 //display & hide sections on primary button click
-
 function hide(ids){
     ids.forEach(id => {
       id.style.display ='none';
     });
   }
-  
   function show(ids){
     ids.forEach(id => {
       id.style.display ='block';
     });
   }
 
-background_btn.onclick = function() {
+//   neck_btn.onclick = function() {
 
+//     show([style_section,
+//         seconday_heading,
+//         neck_section,
+//     ]);
+
+//     hide([
+//         background_section,
+//         ears_section,
+//         leg_section,
+//         hair_section,
+//         mouth_section,
+//         eyes_section,
+//         accessories_section
+//       ]);
+
+// }
+
+  background_btn.onclick = function() {
     show([
         style_section, 
         seconday_heading, 
@@ -56,234 +58,95 @@ background_btn.onclick = function() {
     ]);
 
     hide([
-    neck_section,
-    ears_section,
-    leg_section,
-    hair_section,
-    mouth_section,
-    eyes_section,
-    accessories_section
+    mayo_section,
+    nose_section,
+    cloth_section,
         ]);
 }
 
-neck_btn.onclick = function() {
+mayo_btn.onclick = function() {
+  show([style_section,
+      seconday_heading,
+      mayo_section,
+  ]);
 
-    show([style_section,
-        seconday_heading,
-        neck_section,
+  hide([
+    background_section,
+    nose_section,
+    cloth_section,
     ]);
-
-    hide([background_section,
-        ears_section,
-        leg_section,
-        hair_section,
-        mouth_section,
-        eyes_section,
-        accessories_section]);
-
 }
 
-ears_btn.onclick = function() {
+nose_btn.onclick = function() {
+  show([style_section,
+      seconday_heading,
+      nose_section,
+  ]);
 
-    show([style_section,
-        seconday_heading,
-        ears_section,]);
-
-    hide([neck_section,
-        background_section,
-        leg_section,
-        hair_section,
-        mouth_section,
-        eyes_section,
-        accessories_section,]);
-
+  hide([
+    background_section,
+    mayo_section,
+    cloth_section,
+    ]);
 }
 
-leg_btn.onclick = function() {
+cloth_btn.onclick = function() {
+  show([style_section,
+      seconday_heading,
+      cloth_section,
+  ]);
 
-    show([style_section,
-        seconday_heading,
-        leg_section,]);
-
-    hide([neck_section,
-        ears_section,
-        background_section,
-        hair_section,
-        mouth_section,
-        eyes_section,
-        accessories_section,]);
-
-}
-
-hair_btn.onclick = function() {
-    
-    show([style_section,
-        seconday_heading,
-        hair_section,]);
-
-    hide([neck_section,
-        ears_section,
-        leg_section,
-        background_section,
-        mouth_section,
-        eyes_section,
-        accessories_section,]);
-
-}
-
-mouth_btn.onclick = function() {
-
-    show([style_section,
-        seconday_heading,
-        mouth_section,]);
-
-    hide([neck_section,
-        ears_section,
-        leg_section,
-        hair_section,
-        background_section,
-        eyes_section,
-        accessories_section,]);
-
-}
-
-eyes_btn.onclick = function() {
-
-    show([style_section,
-        seconday_heading,
-        eyes_section,]);
-
-    hide([neck_section,
-        ears_section,
-        leg_section,
-        hair_section,
-        mouth_section,
-        background_section,
-        accessories_section,]);
-
-}
-accessories_btn.onclick = function() {
-
-    show([style_section,
-        seconday_heading,
-        accessories_section,]);
-
-    hide([neck_section,
-        ears_section,
-        leg_section,
-        hair_section,
-        mouth_section,
-        eyes_section,
-        background_section]);   
-
+  hide([
+    background_section,
+    mayo_section,
+    nose_section,
+    ]);
 }
 
 // Button state Active 
-
-
 //Image Change Js
 
 bgBtnAll.forEach(item => {
-
     item.addEventListener('click', (event) => {
-
-        document.getElementById('back_img').src = "/assets/alpaca/backgrounds/" + event.target.value + ".png";
-      
+        document.getElementById('back_img').src = "/assets/mayo/backgrounds/" + event.target.value + ".png";
         bgBtnAll.forEach(e => {
             e.classList.remove('active-bg');});
-
             event.target.classList.add('active-bg');
-
   })
   })
 
-  neckBtnAll.forEach(item => {
+mayoBtnAll.forEach(item => {
     item.addEventListener('click', (event) => {
-      document.getElementById('neck_img').src = "/assets/alpaca/neck/" + event.target.value + ".png";
+      document.getElementById('mayo_img').src = "/assets/mayo/mayo/" + event.target.value + ".png";
       
-      neckBtnAll.forEach(e => {
+      mayoBtnAll.forEach(e => {
         e.classList.remove('active-bg');});
         
         event.target.classList.add('active-bg');
   })
   })
 
-  earsBtnAll.forEach(item => {
+  noseBtnAll.forEach(item => {
     item.addEventListener('click', (event) => {
-      document.getElementById('ears_img').src = "/assets/alpaca/ears/" + event.target.value + ".png";
-        
-      earsBtnAll.forEach(e => {
+      document.getElementById('nose_img').src = "/assets/mayo/nose/" + event.target.value + ".png";
+      
+      mayoBtnAll.forEach(e => {
         e.classList.remove('active-bg');});
         
         event.target.classList.add('active-bg');
-  
-    })
+  })
   })
 
-  legBtnAll.forEach(item => {
-    item.addEventListener('click', (event) => {
-      document.getElementById('leg_img').src = "/assets/alpaca/leg/" + event.target.value + ".png";
-
-      legBtnAll.forEach(e => {
-        e.classList.remove('active-bg');});
+  // neckBtnAll.forEach(item => {
+  //   item.addEventListener('click', (event) => {
+  //     document.getElementById('neck_img').src = "/assets/alpaca/neck/" + event.target.value + ".png";
+      
+  //     neckBtnAll.forEach(e => {
+  //       e.classList.remove('active-bg');});
         
-        event.target.classList.add('active-bg');
-
-
-  })
-  })
-
-  hairBtnAll.forEach(item => {
-    item.addEventListener('click', (event) => {
-      document.getElementById('hair_img').src = "/assets/alpaca/hair/" + event.target.value + ".png";
-
-      hairBtnAll.forEach(e => {
-        e.classList.remove('active-bg');});
-        
-        event.target.classList.add('active-bg');
-
-
-  })
-  })
-
-  mouthBtnAll.forEach(item => {
-    item.addEventListener('click', (event) => {
-      document.getElementById('mouth_img').src = "/assets/alpaca/mouth/" + event.target.value + ".png";
-
-      mouthBtnAll.forEach(e => {
-        e.classList.remove('active-bg');});
-        
-        event.target.classList.add('active-bg');
-
-
-  })
-  })
-
-  eyesBtnAll.forEach(item => {
-    item.addEventListener('click', (event) => {
-      document.getElementById('eyes_img').src = "/assets/alpaca/eyes/" + event.target.value + ".png";
-
-      eyesBtnAll.forEach(e => {
-        e.classList.remove('active-bg');});
-        
-        event.target.classList.add('active-bg');
-
-
-  })
-  })
-
-  accBtnAll.forEach(item => {
-    item.addEventListener('click', (event) => {
-      document.getElementById('accessories_img').src = "/assets/alpaca/accessories/" + event.target.value + ".png";
-
-      accBtnAll.forEach(e => {
-        e.classList.remove('active-bg');});
-        
-        event.target.classList.add('active-bg');
-
-
-  })
-  })
+  //       event.target.classList.add('active-bg');
+  // })
+  // })
 
   document.querySelectorAll('.btn-acc').forEach(item => {
     item.addEventListener('click', (event) => {
@@ -326,13 +189,10 @@ const random = document.getElementById('random');
   const randomColor = Math.floor(Math.random()*16777215).toString(16);
   random.style.backgroundColor = "#" + randomColor;
  randomBtnClick(bgBtnAll);
- randomBtnClick(neckBtnAll);
- randomBtnClick(earsBtnAll);
- randomBtnClick(legBtnAll);
- randomBtnClick(hairBtnAll);
- randomBtnClick(mouthBtnAll);
- randomBtnClick(eyesBtnAll);
- randomBtnClick(accBtnAll);
+ randomBtnClick(mayoBtnAll);
+ randomBtnClick(noseBtnAll);
+ randomBtnClick(clothBtnAll);
+
  confettiContainer.addEmitter({
   size: {
     width: 0,
@@ -368,7 +228,7 @@ downloadBtn.addEventListener('click', function () {
       .toDataURL("image/jpeg")
       .replace("image/jpeg", "image/octet-stream");
 
-    a.download = "Alpaca.jpg";
+    a.download = "mayopixel.jpg";
     a.click();
   });
 

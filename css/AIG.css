@@ -85,19 +85,12 @@ color: #00193d;
   color:white;
 }
 
-
-
-
 #section-style,
 #secondary-heading-2,
 #section_background,
-#section_neck,
-#section_ears,
-#section_leg,
-#section_hair,
-#section_mouth,
-#section_eyes,
-#section_accessories{
+#section_mayo,
+#section_nose,
+#section_cloth{
     display: none;
 }
 
