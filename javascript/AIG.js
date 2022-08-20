@@ -5,7 +5,7 @@ const ears_btn = document.getElementById('ears');
 const leg_btn = document.getElementById('leg');
 const hair_btn = document.getElementById('hair');
 const mouth_btn = document.getElementById('mouth');
-const eyes_btn = document.getElementById('eyes');
+// const eyes_btn = document.getElementById('eyes');
 const accessories_btn = document.getElementById('accessories');
 
 //heading select
@@ -18,7 +18,7 @@ const ears_section = document.getElementById('section_ears');
 const leg_section = document.getElementById('section_leg');
 const hair_section = document.getElementById('section_hair');
 const mouth_section = document.getElementById('section_mouth');
-const eyes_section = document.getElementById('section_eyes');
+// const eyes_section = document.getElementById('section_eyes');
 const accessories_section = document.getElementById('section_accessories');           
 const style_section = document.getElementById('section-style');
 
@@ -30,7 +30,7 @@ const earsBtnAll = document.querySelectorAll('.btn-ears');
 const legBtnAll = document.querySelectorAll('.btn-leg');
 const hairBtnAll =document.querySelectorAll('.btn-hair');
 const mouthBtnAll = document.querySelectorAll('.btn-mouth');
-const eyesBtnAll = document.querySelectorAll('.btn-eyes');
+// const eyesBtnAll = document.querySelectorAll('.btn-eyes');
 const accBtnAll = document.querySelectorAll('.btn-accessories');
 
 //display & hide sections on primary button click
@@ -61,7 +61,7 @@ background_btn.onclick = function() {
     leg_section,
     hair_section,
     mouth_section,
-    eyes_section,
+    // eyes_section,
     accessories_section
         ]);
 }
@@ -78,7 +78,7 @@ neck_btn.onclick = function() {
         leg_section,
         hair_section,
         mouth_section,
-        eyes_section,
+        // eyes_section,
         accessories_section]);
 
 }
@@ -94,7 +94,7 @@ ears_btn.onclick = function() {
         leg_section,
         hair_section,
         mouth_section,
-        eyes_section,
+        // eyes_section,
         accessories_section,]);
 
 }
@@ -110,7 +110,7 @@ leg_btn.onclick = function() {
         background_section,
         hair_section,
         mouth_section,
-        eyes_section,
+        // eyes_section,
         accessories_section,]);
 
 }
@@ -126,7 +126,7 @@ hair_btn.onclick = function() {
         leg_section,
         background_section,
         mouth_section,
-        eyes_section,
+        // eyes_section,
         accessories_section,]);
 
 }
@@ -142,26 +142,26 @@ mouth_btn.onclick = function() {
         leg_section,
         hair_section,
         background_section,
-        eyes_section,
+        // eyes_section,
         accessories_section,]);
 
 }
 
-eyes_btn.onclick = function() {
+// eyes_btn.onclick = function() {
 
-    show([style_section,
-        seconday_heading,
-        eyes_section,]);
+//     show([style_section,
+//         seconday_heading,
+//         eyes_section,]);
 
-    hide([neck_section,
-        ears_section,
-        leg_section,
-        hair_section,
-        mouth_section,
-        background_section,
-        accessories_section,]);
+//     hide([neck_section,
+//         ears_section,
+//         leg_section,
+//         hair_section,
+//         mouth_section,
+//         background_section,
+//         accessories_section,]);
 
-}
+// }
 accessories_btn.onclick = function() {
 
     show([style_section,
@@ -173,7 +173,7 @@ accessories_btn.onclick = function() {
         leg_section,
         hair_section,
         mouth_section,
-        eyes_section,
+        // eyes_section,
         background_section]);   
 
 }
@@ -259,18 +259,18 @@ bgBtnAll.forEach(item => {
   })
   })
 
-  eyesBtnAll.forEach(item => {
-    item.addEventListener('click', (event) => {
-      document.getElementById('eyes_img').src = "/assets/alpaca/eyes/" + event.target.value + ".png";
+  // eyesBtnAll.forEach(item => {
+  //   item.addEventListener('click', (event) => {
+  //     document.getElementById('eyes_img').src = "/assets/alpaca/eyes/" + event.target.value + ".png";
 
-      eyesBtnAll.forEach(e => {
-        e.classList.remove('active-bg');});
+  //     eyesBtnAll.forEach(e => {
+  //       e.classList.remove('active-bg');});
         
-        event.target.classList.add('active-bg');
+  //       event.target.classList.add('active-bg');
 
 
-  })
-  })
+  // })
+  // })
 
   accBtnAll.forEach(item => {
     item.addEventListener('click', (event) => {
@@ -331,7 +331,7 @@ const random = document.getElementById('random');
  randomBtnClick(legBtnAll);
  randomBtnClick(hairBtnAll);
  randomBtnClick(mouthBtnAll);
- randomBtnClick(eyesBtnAll);
+//  randomBtnClick(eyesBtnAll);
  randomBtnClick(accBtnAll);
  confettiContainer.addEmitter({
   size: {
