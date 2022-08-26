@@ -91,13 +91,14 @@ color: #00193d;
 #section-style,
 #secondary-heading-2,
 #section_background,
-#section_neck,
-#section_ears,
-#section_leg,
+#section_skintone,
+#section_blush,
+#section_cloth,
+#section_shorts,
+#section_collar,
 #section_hair,
 #section_mouth,
-#section_eyes,
-#section_accessories{
+#section_eyes{
     display: none;
 }
 

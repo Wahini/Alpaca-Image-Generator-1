@@ -1,37 +1,40 @@
 // Primary Buttons select
 const background_btn = document.getElementById('background');
-const neck_btn = document.getElementById('neck');
-const ears_btn = document.getElementById('ears');
-const leg_btn = document.getElementById('leg');
+const skintone_btn = document.getElementById('skintone');
+const blush_btn = document.getElementById('blush');
+const cloth_btn = document.getElementById('cloth');
+const shorts_btn = document.getElementById('shorts');
 const hair_btn = document.getElementById('hair');
 const mouth_btn = document.getElementById('mouth');
 const eyes_btn = document.getElementById('eyes');
-const accessories_btn = document.getElementById('accessories');
+const collar_btn = document.getElementById('collar');
 
 //heading select
 const seconday_heading = document.getElementById('secondary-heading-2');
 
 //section select
 const background_section = document.getElementById('section_background');
-const neck_section = document.getElementById('section_neck');
-const ears_section = document.getElementById('section_ears');
-const leg_section = document.getElementById('section_leg');
+const skintone_section = document.getElementById('section_skintone');
+const blush_section = document.getElementById('section_blush');
+const cloth_section = document.getElementById('section_cloth');
+const shorts_section = document.getElementById('section_shorts');
 const hair_section = document.getElementById('section_hair');
 const mouth_section = document.getElementById('section_mouth');
 const eyes_section = document.getElementById('section_eyes');
-const accessories_section = document.getElementById('section_accessories');           
+const collar_section = document.getElementById('section_collar');           
 const style_section = document.getElementById('section-style');
 
 
 //All secondary buttons select acc to section
 const bgBtnAll = document.querySelectorAll('.btn-bg');
-const neckBtnAll = document.querySelectorAll('.btn-neck');
-const earsBtnAll = document.querySelectorAll('.btn-ears');
-const legBtnAll = document.querySelectorAll('.btn-leg');
+const skintoneBtnAll = document.querySelectorAll('.btn-skintone');
+const blushBtnAll = document.querySelectorAll('.btn-blush');
+const clothBtnAll = document.querySelectorAll('.btn-cloth');
+const shortsBtnAll = document.querySelectorAll('.btn-shorts');
 const hairBtnAll =document.querySelectorAll('.btn-hair');
 const mouthBtnAll = document.querySelectorAll('.btn-mouth');
 const eyesBtnAll = document.querySelectorAll('.btn-eyes');
-const accBtnAll = document.querySelectorAll('.btn-accessories');
+const collarBtnAll = document.querySelectorAll('.btn-collar');
 
 //display & hide sections on primary button click
 
@@ -56,62 +59,83 @@ background_btn.onclick = function() {
     ]);
 
     hide([
-    neck_section,
-    ears_section,
-    leg_section,
+    skintone_section,
+    blush_section,
+    cloth_section,
+    shorts_section,
     hair_section,
     mouth_section,
     eyes_section,
-    accessories_section
+    collar_section
         ]);
 }
 
-neck_btn.onclick = function() {
+skintone_btn.onclick = function() {
 
     show([style_section,
         seconday_heading,
-        neck_section,
+        skintone_section,
     ]);
 
     hide([background_section,
-        ears_section,
-        leg_section,
+        blush_section,
+        cloth_section,
+        shorts_section,
         hair_section,
         mouth_section,
         eyes_section,
-        accessories_section]);
+        collar_section]);
 
 }
 
-ears_btn.onclick = function() {
+blush_btn.onclick = function() {
 
     show([style_section,
         seconday_heading,
-        ears_section,]);
+        blush_section,]);
 
-    hide([neck_section,
+    hide([skintone_section,
         background_section,
-        leg_section,
+        cloth_section,
+        shorts_section,
         hair_section,
         mouth_section,
         eyes_section,
-        accessories_section,]);
+        collar_section,]);
 
 }
 
-leg_btn.onclick = function() {
+cloth_btn.onclick = function() {
 
     show([style_section,
         seconday_heading,
-        leg_section,]);
+        cloth_section,]);
 
-    hide([neck_section,
-        ears_section,
+    hide([skintone_section,
+        blush_section,
         background_section,
+        shorts_section,
         hair_section,
         mouth_section,
         eyes_section,
-        accessories_section,]);
+        collar_section,]);
+
+}
+
+shorts_btn.onclick = function() {
+
+  show([style_section,
+      seconday_heading,
+      shorts_section,]);
+
+  hide([skintone_section,
+      blush_section,
+      background_section,
+      cloth_section,
+      hair_section,
+      mouth_section,
+      eyes_section,
+      collar_section,]);
 
 }
 
@@ -121,13 +145,14 @@ hair_btn.onclick = function() {
         seconday_heading,
         hair_section,]);
 
-    hide([neck_section,
-        ears_section,
-        leg_section,
+    hide([skintone_section,
+        blush_section,
+        cloth_section,
+        shorts_section,
         background_section,
         mouth_section,
         eyes_section,
-        accessories_section,]);
+        collar_section,]);
 
 }
 
@@ -137,13 +162,14 @@ mouth_btn.onclick = function() {
         seconday_heading,
         mouth_section,]);
 
-    hide([neck_section,
-        ears_section,
-        leg_section,
+    hide([skintone_section,
+        blush_section,
+        cloth_section,
+        shorts_section,
         hair_section,
         background_section,
         eyes_section,
-        accessories_section,]);
+        collar_section,]);
 
 }
 
@@ -153,24 +179,26 @@ eyes_btn.onclick = function() {
         seconday_heading,
         eyes_section,]);
 
-    hide([neck_section,
-        ears_section,
-        leg_section,
+    hide([skintone_section,
+        blush_section,
+        cloth_section,
+        shorts_section,
         hair_section,
         mouth_section,
         background_section,
-        accessories_section,]);
+        collar_section,]);
 
 }
-accessories_btn.onclick = function() {
+collar_btn.onclick = function() {
 
     show([style_section,
         seconday_heading,
-        accessories_section,]);
+        collar_section,]);
 
-    hide([neck_section,
-        ears_section,
-        leg_section,
+    hide([skintone_section,
+        blush_section,
+        cloth_section,
+        shorts_section,
         hair_section,
         mouth_section,
         eyes_section,
@@ -187,7 +215,7 @@ bgBtnAll.forEach(item => {
 
     item.addEventListener('click', (event) => {
 
-        document.getElementById('back_img').src = "/assets/alpaca/backgrounds/" + event.target.value + ".png";
+        document.getElementById('back_img').src = "/assets/kid/Background/" + event.target.value + ".png";
       
         bgBtnAll.forEach(e => {
             e.classList.remove('active-bg');});
@@ -197,22 +225,22 @@ bgBtnAll.forEach(item => {
   })
   })
 
-  neckBtnAll.forEach(item => {
+  skintoneBtnAll.forEach(item => {
     item.addEventListener('click', (event) => {
-      document.getElementById('neck_img').src = "/assets/alpaca/neck/" + event.target.value + ".png";
+      document.getElementById('skintone_img').src = "/assets/kid/Skintone/" + event.target.value + ".png";
       
-      neckBtnAll.forEach(e => {
+      skintoneBtnAll.forEach(e => {
         e.classList.remove('active-bg');});
         
         event.target.classList.add('active-bg');
   })
   })
 
-  earsBtnAll.forEach(item => {
+  blushBtnAll.forEach(item => {
     item.addEventListener('click', (event) => {
-      document.getElementById('ears_img').src = "/assets/alpaca/ears/" + event.target.value + ".png";
+      document.getElementById('blush_img').src = "/assets/kid/Blush/" + event.target.value + ".png";
         
-      earsBtnAll.forEach(e => {
+      blushBtnAll.forEach(e => {
         e.classList.remove('active-bg');});
         
         event.target.classList.add('active-bg');
@@ -220,11 +248,24 @@ bgBtnAll.forEach(item => {
     })
   })
 
-  legBtnAll.forEach(item => {
+  clothBtnAll.forEach(item => {
     item.addEventListener('click', (event) => {
-      document.getElementById('leg_img').src = "/assets/alpaca/leg/" + event.target.value + ".png";
+      document.getElementById('cloth_img').src = "/assets/kid/Cloth/" + event.target.value + ".png";
 
-      legBtnAll.forEach(e => {
+      clothBtnAll.forEach(e => {
+        e.classList.remove('active-bg');});
+        
+        event.target.classList.add('active-bg');
+
+
+  })
+  })
+
+  shortsBtnAll.forEach(item => {
+    item.addEventListener('click', (event) => {
+      document.getElementById('shorts_img').src = "/assets/kid/Shorts/" + event.target.value + ".png";
+
+      clothBtnAll.forEach(e => {
         e.classList.remove('active-bg');});
         
         event.target.classList.add('active-bg');
@@ -235,7 +276,7 @@ bgBtnAll.forEach(item => {
 
   hairBtnAll.forEach(item => {
     item.addEventListener('click', (event) => {
-      document.getElementById('hair_img').src = "/assets/alpaca/hair/" + event.target.value + ".png";
+      document.getElementById('hair_img').src = "/assets/kid/Hair/" + event.target.value + ".png";
 
       hairBtnAll.forEach(e => {
         e.classList.remove('active-bg');});
@@ -248,7 +289,7 @@ bgBtnAll.forEach(item => {
 
   mouthBtnAll.forEach(item => {
     item.addEventListener('click', (event) => {
-      document.getElementById('mouth_img').src = "/assets/alpaca/mouth/" + event.target.value + ".png";
+      document.getElementById('mouth_img').src = "/assets/kid/Mouth/" + event.target.value + ".png";
 
       mouthBtnAll.forEach(e => {
         e.classList.remove('active-bg');});
@@ -261,7 +302,7 @@ bgBtnAll.forEach(item => {
 
   eyesBtnAll.forEach(item => {
     item.addEventListener('click', (event) => {
-      document.getElementById('eyes_img').src = "/assets/alpaca/eyes/" + event.target.value + ".png";
+      document.getElementById('eyes_img').src = "/assets/kid/Eyes/" + event.target.value + ".png";
 
       eyesBtnAll.forEach(e => {
         e.classList.remove('active-bg');});
@@ -272,11 +313,11 @@ bgBtnAll.forEach(item => {
   })
   })
 
-  accBtnAll.forEach(item => {
+  collarBtnAll.forEach(item => {
     item.addEventListener('click', (event) => {
-      document.getElementById('accessories_img').src = "/assets/alpaca/accessories/" + event.target.value + ".png";
+      document.getElementById('collar_img').src = "/assets/kid/Collar/" + event.target.value + ".png";
 
-      accBtnAll.forEach(e => {
+      collarBtnAll.forEach(e => {
         e.classList.remove('active-bg');});
         
         event.target.classList.add('active-bg');
@@ -326,13 +367,14 @@ const random = document.getElementById('random');
   const randomColor = Math.floor(Math.random()*16777215).toString(16);
   random.style.backgroundColor = "#" + randomColor;
  randomBtnClick(bgBtnAll);
- randomBtnClick(neckBtnAll);
- randomBtnClick(earsBtnAll);
- randomBtnClick(legBtnAll);
+ randomBtnClick(skintoneBtnAll);
+ randomBtnClick(blushBtnAll);
+ randomBtnClick(clothBtnAll);
+ randomBtnClick(shortsBtnAll);
  randomBtnClick(hairBtnAll);
  randomBtnClick(mouthBtnAll);
  randomBtnClick(eyesBtnAll);
- randomBtnClick(accBtnAll);
+ randomBtnClick(collarBtnAll);
  confettiContainer.addEmitter({
   size: {
     width: 0,
@@ -365,10 +407,10 @@ downloadBtn.addEventListener('click', function () {
   html2canvas( document.getElementById('aig') ).then((canvas) => {
     let a = document.createElement("a");
     a.href = canvas
-      .toDataURL("image/jpeg")
-      .replace("image/jpeg", "image/octet-stream");
+      .toDataURL("image/png")
+      .replace("image/png", "image/octet-stream");
 
-    a.download = "Alpaca.jpg";
+    a.download = "kid.png";
     a.click();
   });
 
