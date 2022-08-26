@@ -290,10 +290,10 @@ const random = document.getElementById('random');
   random.style.backgroundColor = "#" + randomColor;
  randomBtnClick(bgBtnAll);
  randomBtnClick(mayoBtnAll);
+ randomBtnClick(mouthBtnAll);
  randomBtnClick(earsBtnAll);
  randomBtnClick(clothBtnAll);
  randomBtnClick(hatBtnAll);
- randomBtnClick(mouthBtnAll);
  randomBtnClick(accBtnAll);
  confettiContainer.addEmitter({
   size: {
@@ -330,7 +330,7 @@ downloadBtn.addEventListener('click', function () {
       .toDataURL("image/png")
       .replace("image/png", "image/octet-stream");
 
-    a.download = "mayopixel.png";
+    a.download = "duy.png";
     a.click();
   });
 
