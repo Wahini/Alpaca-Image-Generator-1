@@ -330,7 +330,7 @@ downloadBtn.addEventListener('click', function () {
       .toDataURL("image/png")
       .replace("image/png", "image/octet-stream");
 
-    a.download = "duy.png";
+    a.download = "iki.png";
     a.click();
   });
 
